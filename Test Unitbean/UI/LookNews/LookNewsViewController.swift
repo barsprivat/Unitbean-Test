@@ -9,33 +9,37 @@ import UIKit
 
 class LookNewsViewController: UITableViewController {
     
-    private var dataFetcher: NetworkDataFetcher!
     private var news: [NewsModel] = []
     private var selectedNews: NewsModel?
+    private var presenter: LookNewsPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataFetcher = NetworkDataFetcher(networkService: NetworkService())
+        setup()
         setupUI()
-        setupBindings()
+        presenter.getNews()
+    }
+    
+    func configure(news: [NewsModel]?) {
+        guard let news = news else { return }
+        self.news = news
+        self.tableView.reloadData()
+    }
+    
+    private func setup() {
+        let viewController = self
+        let interactor     = LookNewsInteractor()
+        let presenter      = LookNewsPresenter()
+        
+        interactor.viewController = viewController
+        presenter.interactor = interactor
+        viewController.presenter = presenter
     }
     
     private func setupUI() {
         setupTableView()
         setupTitleView()
-    }
-    
-    private func setupBindings() {
-        dataFetcher.getNews { [weak self] news, error in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            if let news = news {
-                self?.news = news
-            }
-            self?.tableView.reloadData()
-        }
     }
 
     private func setupTitleView() {

@@ -18,6 +18,8 @@
 		10859BA726021FBC00D16922 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10859BA626021FBC00D16922 /* NewsFeedCell.xib */; };
 		10859BBF26033ECF00D16922 /* LookNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10859BBE26033ECF00D16922 /* LookNewsViewController.swift */; };
 		10859BCA260878E600D16922 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10859BC9260878E600D16922 /* DetailNewsViewController.swift */; };
+		10A4CDB6260B21F200D5A5AA /* LookNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4CDB5260B21F200D5A5AA /* LookNewsInteractor.swift */; };
+		10A4CDBB260B220B00D5A5AA /* LookNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4CDBA260B220B00D5A5AA /* LookNewsPresenter.swift */; };
 		1183C4DA26059F0200E6A251 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183C4D926059F0200E6A251 /* API.swift */; };
 		1183C4E22605A0BE00E6A251 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183C4E12605A0BE00E6A251 /* NetworkService.swift */; };
 		1183C4E72605A0CA00E6A251 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183C4E62605A0CA00E6A251 /* NetworkDataFetcher.swift */; };
@@ -62,6 +64,8 @@
 		10859BA626021FBC00D16922 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
 		10859BBE26033ECF00D16922 /* LookNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookNewsViewController.swift; sourceTree = "<group>"; };
 		10859BC9260878E600D16922 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
+		10A4CDB5260B21F200D5A5AA /* LookNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookNewsInteractor.swift; sourceTree = "<group>"; };
+		10A4CDBA260B220B00D5A5AA /* LookNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookNewsPresenter.swift; sourceTree = "<group>"; };
 		1183C4D926059F0200E6A251 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1183C4E12605A0BE00E6A251 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1183C4E62605A0CA00E6A251 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
@@ -158,6 +162,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		10A4CDB3260B21BD00D5A5AA /* LookNews */ = {
+			isa = PBXGroup;
+			children = (
+				10859BBE26033ECF00D16922 /* LookNewsViewController.swift */,
+				10A4CDB5260B21F200D5A5AA /* LookNewsInteractor.swift */,
+				10A4CDBA260B220B00D5A5AA /* LookNewsPresenter.swift */,
+			);
+			path = LookNews;
+			sourceTree = "<group>";
+		};
+		10A4CDB4260B21C900D5A5AA /* DetailNews */ = {
+			isa = PBXGroup;
+			children = (
+				10859BC9260878E600D16922 /* DetailNewsViewController.swift */,
+			);
+			path = DetailNews;
+			sourceTree = "<group>";
+		};
 		1183C4CD26059E7E00E6A251 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,10 +192,10 @@
 		1183C4D126059EA300E6A251 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				10A4CDB4260B21C900D5A5AA /* DetailNews */,
+				10A4CDB3260B21BD00D5A5AA /* LookNews */,
 				10859B9D26021E5600D16922 /* Cell */,
 				10859B682601F84800D16922 /* Main.storyboard */,
-				10859BC9260878E600D16922 /* DetailNewsViewController.swift */,
-				10859BBE26033ECF00D16922 /* LookNewsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -357,6 +379,7 @@
 				1183C50E2605AE5500E6A251 /* String+Extensions.swift in Sources */,
 				1183C4E72605A0CA00E6A251 /* NetworkDataFetcher.swift in Sources */,
 				10859B632601F84800D16922 /* AppDelegate.swift in Sources */,
+				10A4CDB6260B21F200D5A5AA /* LookNewsInteractor.swift in Sources */,
 				1183C5062605AE3A00E6A251 /* Date+Extensions.swift in Sources */,
 				10859B652601F84800D16922 /* SceneDelegate.swift in Sources */,
 				10859BBF26033ECF00D16922 /* LookNewsViewController.swift in Sources */,
@@ -364,6 +387,7 @@
 				1183C4E22605A0BE00E6A251 /* NetworkService.swift in Sources */,
 				1183C4FC2605ACB400E6A251 /* WebImageView.swift in Sources */,
 				1183C4DA26059F0200E6A251 /* API.swift in Sources */,
+				10A4CDBB260B220B00D5A5AA /* LookNewsPresenter.swift in Sources */,
 				10859BCA260878E600D16922 /* DetailNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,8 +25,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J3-4K-uA8">
                         <rect key="frame" x="16" y="252" width="349" height="20"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="data_time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHQ-3Q-7bS">
-                                <rect key="frame" x="127.5" y="0.0" width="57" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="data_time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHQ-3Q-7bS">
+                                <rect key="frame" x="292" y="0.0" width="57" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.49411764705882355" green="0.49411764705882355" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,10 +46,8 @@
                             <constraint firstItem="XHQ-3Q-7bS" firstAttribute="top" secondItem="5J3-4K-uA8" secondAttribute="top" id="NMj-tl-2F5"/>
                             <constraint firstAttribute="bottom" secondItem="XHQ-3Q-7bS" secondAttribute="bottom" id="OHI-nO-8Am"/>
                             <constraint firstAttribute="height" constant="20" id="PLH-uf-I8Q"/>
-                            <constraint firstItem="XHQ-3Q-7bS" firstAttribute="leading" secondItem="vjx-bB-iFf" secondAttribute="trailing" constant="18" id="QK3-sh-Ofh"/>
                             <constraint firstItem="vjx-bB-iFf" firstAttribute="top" secondItem="5J3-4K-uA8" secondAttribute="top" id="T5E-ZC-I3g"/>
                             <constraint firstAttribute="bottom" secondItem="vjx-bB-iFf" secondAttribute="bottom" id="dc6-on-Hm1"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHQ-3Q-7bS" secondAttribute="trailing" id="zOr-a3-Fgf"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uj6-gF-v8S" customClass="WebImageView" customModule="Test_Unitbean" customModuleProvider="target">
@@ -65,9 +63,11 @@
                     <constraint firstItem="5J3-4K-uA8" firstAttribute="top" secondItem="usO-Yv-8Hl" secondAttribute="bottom" constant="8" id="Qdk-zb-erc"/>
                     <constraint firstItem="usO-Yv-8Hl" firstAttribute="top" secondItem="uj6-gF-v8S" secondAttribute="bottom" constant="16" id="SPg-vs-g8k"/>
                     <constraint firstItem="uj6-gF-v8S" firstAttribute="leading" secondItem="FqJ-gZ-llx" secondAttribute="leading" constant="16" id="Ugy-gh-0CO"/>
+                    <constraint firstItem="XHQ-3Q-7bS" firstAttribute="top" secondItem="uj6-gF-v8S" secondAttribute="bottom" constant="48" id="Zhl-kr-1aB"/>
                     <constraint firstItem="usO-Yv-8Hl" firstAttribute="trailing" secondItem="uj6-gF-v8S" secondAttribute="trailing" id="bay-N8-ld5"/>
                     <constraint firstItem="5J3-4K-uA8" firstAttribute="leading" secondItem="usO-Yv-8Hl" secondAttribute="leading" id="cto-lx-tgf"/>
                     <constraint firstItem="5J3-4K-uA8" firstAttribute="trailing" secondItem="usO-Yv-8Hl" secondAttribute="trailing" id="fW3-fb-M91"/>
+                    <constraint firstItem="XHQ-3Q-7bS" firstAttribute="trailing" secondItem="uj6-gF-v8S" secondAttribute="trailing" id="m4H-p3-Tqo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
