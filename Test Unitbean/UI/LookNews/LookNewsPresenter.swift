@@ -8,9 +8,9 @@
 import Foundation
 
 class LookNewsPresenter {
-    var interactor: LookNewsInteractor!
+    var viewController: LookNewsViewController!
     
-    func getNews() {
-        interactor.getNews()
+    func updateData(_ news: [NewsModel]?) {
+        viewController.configure(news: news)
     }
 }

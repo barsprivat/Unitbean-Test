@@ -11,14 +11,14 @@ class LookNewsViewController: UITableViewController {
     
     private var news: [NewsModel] = []
     private var selectedNews: NewsModel?
-    private var presenter: LookNewsPresenter!
+    private var interactor: LookNewsInteractor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup()
         setupUI()
-        presenter.getNews()
+        interactor.getNews()
     }
     
     func configure(news: [NewsModel]?) {
@@ -32,9 +32,9 @@ class LookNewsViewController: UITableViewController {
         let interactor     = LookNewsInteractor()
         let presenter      = LookNewsPresenter()
         
-        interactor.viewController = viewController
-        presenter.interactor = interactor
-        viewController.presenter = presenter
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        viewController.interactor = interactor
     }
     
     private func setupUI() {

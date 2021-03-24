@@ -8,13 +8,13 @@
 import Foundation
 
 class LookNewsInteractor {
-    var viewController: LookNewsViewController!
+    var presenter: LookNewsPresenter!
     
     private let fetcher: NetworkDataFetcher = NetworkDataFetcher(networkService: NetworkService())
     
     func getNews() {
         fetcher.getNews { (news, error) in
-            self.viewController.configure(news: news)
+            self.presenter.updateData(news)
         }
     }
 }
